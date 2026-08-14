@@ -1,4 +1,4 @@
-# (c) ShivamNox
+# (c) Smarty MS
 from ShivamNox.bot import StreamBot
 from ShivamNox.vars import Var
 import logging
@@ -92,7 +92,7 @@ I even support channels for effortless sharing. 📡
              InlineKeyboardButton("⚡️ Updates", url="https://t.me/innoshiv")],
             [InlineKeyboardButton("❓ Help", callback_data="help"),
              InlineKeyboardButton("ℹ️ About", callback_data="about")],
-            [InlineKeyboardButton("🧑‍💻 Developer", url="https://t.me/shivamnox")]
+            [InlineKeyboardButton("🧑‍💻 Developer", url="https://t.me/SmartBoy_ApnaMS")]
         ]
     )
 )
@@ -115,6 +115,32 @@ async def on_help_button(client, callback_query: CallbackQuery):
         )
     )
 
+ABOUT_TEXT = """👋 **Hello there!**
+
+🔹 **Bot Name:** [File Stream Bot](https://t.me/filestream_iibot)  
+🔹 **Library:** [Pyrogram](https://docs.pyrogram.org)  
+🔹 **Server:** [Hivabytes](https://hivabytes)  
+🔹 **Language:** [Python3](https://python.org)  
+🔹 **Database:** [MongoDB](https://mongodb.com)  
+👨‍💻 **Developer:** [Smarty MS](https://t.me/SmartBoy_ApnaMS)
+"""
+
+@StreamBot.on_message(filters.command("about") & filters.private)
+async def about_cmd(bot, message):
+    # Fix: /about had no message-command handler before (only the inline
+    # "About" button worked via callback_query), so typing /about did nothing.
+    await message.reply_text(
+        text=ABOUT_TEXT,
+        disable_web_page_preview=True,
+        quote=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton("🧑‍💻 Developer", url="https://t.me/SmartBoy_ApnaMS")]
+            ]
+        )
+    )
+
+
 @StreamBot.on_callback_query(filters.regex('^about$'))
 async def on_about_button(client, callback_query: CallbackQuery):
     # Acknowledge the callback by answering the query
@@ -129,12 +155,12 @@ async def on_about_button(client, callback_query: CallbackQuery):
 🔹 **Server:** [Hivabytes](https://hivabytes)  
 🔹 **Language:** [Python3](https://python.org)  
 🔹 **Database:** [MongoDB](https://mongodb.com)  
-👨‍💻 **Developer:** [ShivamNox](https://t.me/shivamnox)
+👨‍💻 **Developer:** [Smarty MS](https://t.me/SmartBoy_ApnaMS)
 """,
     disable_web_page_preview=True,
     reply_markup=InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("🧑‍💻 Developer", url="https://t.me/shivamnox"), InlineKeyboardButton("🔙 Back", callback_data="back")]
+            [InlineKeyboardButton("🧑‍💻 Developer", url="https://t.me/SmartBoy_ApnaMS"), InlineKeyboardButton("🔙 Back", callback_data="back")]
         ]
     )
 )
@@ -159,7 +185,7 @@ I even support channels for effortless sharing. 📡
                  InlineKeyboardButton("⚡️ Updates", url="https://t.me/innoshiv")],
                 [InlineKeyboardButton("❓ Help", callback_data="help"),
                  InlineKeyboardButton("ℹ️ About", callback_data="about")],
-                [InlineKeyboardButton("🧑‍💻 Developer", url="https://t.me/shivamnox")]
+                [InlineKeyboardButton("🧑‍💻 Developer", url="https://t.me/SmartBoy_ApnaMS")]
             ]
         )
     )
@@ -213,7 +239,7 @@ async def help_handler(bot, message):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("💁‍♂️ Owner", url="https://t.me/shivamnox")],
+                [InlineKeyboardButton("💁‍♂️ Owner", url="https://t.me/SmartBoy_ApnaMS")],
                 [InlineKeyboardButton("💥 Source Code", url="https://t.me/innoshiv")]
             ]
         )
