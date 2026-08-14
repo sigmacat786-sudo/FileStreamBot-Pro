@@ -29,8 +29,8 @@ class Var(object):
     else:
         ON_HEROKU = False
         
-    FQDN = str(getenv('FQDN', '0.0.0.0:3000')) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-    HAS_SSL = getenv('HAS_SSL', 'False').lower() == 'true'
+    FQDN = str(getenv('FQDN', 'filestreambot-pro-waiu.onrender.com')) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
+    HAS_SSL = getenv('HAS_SSL', 'True').lower() == 'true'
     
     # URL from ENV or Default based on SSL (same pattern as other variables)
     if HAS_SSL:
