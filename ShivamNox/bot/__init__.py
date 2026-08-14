@@ -1,4 +1,4 @@
-# (c) ShivamNox
+# (c) Smarty MS
 import logging
 import asyncio
 from pyrogram import Client

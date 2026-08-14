@@ -1,4 +1,4 @@
-# (c) ShivamNox - Channel Resolution Fix
+# (c) Smarty MS - Channel Resolution Fix
 import asyncio
 import logging
 from pyrogram import Client

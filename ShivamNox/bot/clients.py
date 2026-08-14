@@ -1,4 +1,4 @@
-# (c) ShivamNox
+# (c) Smarty MS
 import asyncio
 import logging
 from ..vars import Var
