@@ -1,4 +1,4 @@
-# (c) ShivamNox
+# (c) Smarty MS
 
 import time
 import logging

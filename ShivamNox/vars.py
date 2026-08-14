@@ -1,4 +1,4 @@
-# (c) ShivamNox
+# (c) Smarty MS
 import os
 from os import getenv, environ
 from dotenv import load_dotenv
