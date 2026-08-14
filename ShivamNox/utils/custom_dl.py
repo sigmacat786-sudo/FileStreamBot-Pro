@@ -1,4 +1,4 @@
-# (c) ShivamNox - Fixed for high traffic
+# (c) Smarty MS - Fixed for high traffic
 import math
 import asyncio
 import logging

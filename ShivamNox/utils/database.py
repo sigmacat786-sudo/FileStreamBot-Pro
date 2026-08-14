@@ -1,4 +1,4 @@
-#(c) ShivamNox
+#(c) Smarty MS
 import datetime
 import motor.motor_asyncio
 

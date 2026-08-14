@@ -1,4 +1,4 @@
-# (c) ShivamNox
+# (c) Smarty MS
 
 
 def humanbytes(size):

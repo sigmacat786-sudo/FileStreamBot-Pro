@@ -1,1 +1,1 @@
-# (c) ShivamNox
+# (c) Smarty MS

@@ -1,4 +1,4 @@
-# (c) ShivamNox
+# (c) Smarty MS
 from pyrogram import Client
 from pyrogram.errors import PeerIdInvalid, ChannelInvalid
 from typing import Any, Optional
